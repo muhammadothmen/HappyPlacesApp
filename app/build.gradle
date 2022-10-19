@@ -1,15 +1,16 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
 
 }
 
 android {
-    namespace 'com.othman.happyplaces'
+    namespace 'com.othman.happyplacesapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.othman.happyplaces"
+        applicationId "com.othman.happyplacesapp"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -31,20 +32,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures{
+        viewBinding true
+    }
 }
 
 dependencies {
-/*
-material 1.00, which in the end allows us to use material design,
- which is pretty cool, and that includes the fab button.
-  So this add button, once we're done here,
-   you can press sync now in order to sync the new implementation
-*/
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20"
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'com.google.android.material:material:1.6.1'
 
+    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'

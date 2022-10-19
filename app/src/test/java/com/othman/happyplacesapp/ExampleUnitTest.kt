@@ -1,4 +1,4 @@
-package com.othman.happyplaces
+package com.othman.happyplacesapp
 
 import org.junit.Test
 
